@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "mysql8": "^2.17.3"
+  }
+}

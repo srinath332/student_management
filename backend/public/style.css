@@ -1,0 +1,169 @@
+/* General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Page Title */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+hr {
+    display: none; /* Hide default horizontal lines for cleaner UI */
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+    display: inline-block;
+    margin: 4px 2px;
+}
+
+a:hover {
+    background-color: #e8f4fc;
+    color: #2980b9;
+}
+
+/* Navigation Bar Divider Replacement */
+body > a + text {
+    color: #ccc;
+}
+
+/* Input Fields & Form Group Layouts */
+label, body {
+    font-size: 15px;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 14px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: block;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-right: 8px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Specific Action Colors */
+button[onclick*="deleteStudent"] {
+    background-color: #e74c3c;
+}
+
+button[onclick*="deleteStudent"]:hover {
+    background-color: #c0392b;
+}
+
+button[onclick*="updateStudent"] {
+    background-color: #f39c12;
+}
+
+button[onclick*="updateStudent"]:hover {
+    background-color: #d68910;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none !important;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Dashboard Action Buttons (index.html) */
+body > button[onclick*="location.href"] {
+    width: 100%;
+    max-width: 320px;
+    text-align: left;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #2c3e50;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+body > button[onclick*="location.href"]:hover {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
